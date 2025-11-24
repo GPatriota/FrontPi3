@@ -69,12 +69,12 @@ function SignUp() {
           </div>
           <span className="text-2xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Habitus</span>
         </div>
-        <a
-          href="/login"
+        <Link
+          to="/login"
           className="px-6 py-2 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all shadow-md hover:shadow-lg"
         >
           Entrar
-        </a>
+        </Link>
       </header>
 
       <main className="flex-grow flex items-center justify-center p-4">

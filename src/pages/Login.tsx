@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import api from '../services/api';
 import { useAuth } from '../hooks/useAuth';
 import { Mail, Lock, LogIn, Sparkles } from 'lucide-react';
@@ -63,14 +63,16 @@ function Login() {
           <div className="p-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg shadow-lg">
             <Sparkles size={24} className="text-white" />
           </div>
-          <span className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Habitus</span>
+          <span className="text-2xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+            Habitus
+          </span>
         </div>
-        <a
-          href="/signup"
+        <Link
+          to="/signup"
           className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all shadow-md hover:shadow-lg"
         >
           Cadastrar
-        </a>
+        </Link>
       </header>
 
       <main className="flex-grow flex items-center justify-center p-4">
@@ -125,7 +127,10 @@ function Login() {
             </div>
 
             {error && (
-              <div className="rounded-xl border-2 border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700 shadow-sm" role="alert">
+              <div
+                className="rounded-xl border-2 border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700 shadow-sm"
+                role="alert"
+              >
                 <div className="flex items-center gap-2">
                   <span className="text-red-500 font-bold">⚠</span>
                   <span className="font-medium">{error}</span>
@@ -154,12 +159,12 @@ function Login() {
 
           <p className="mt-8 text-sm text-gray-600">
             Não tem uma conta?
-            <a
-              href="/signup"
+            <Link
+              to="/signup"
               className="font-bold text-cyan-600 hover:underline ml-1"
             >
               Registre-se
-            </a>
+            </Link>
           </p>
         </div>
       </main>

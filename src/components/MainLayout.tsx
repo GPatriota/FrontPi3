@@ -80,14 +80,17 @@ function MainLayout({ children, activePage }: MainLayoutProps) {
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <a
-                    href={item.path}
+                  <button
+                    type="button"
                     className={getNavLinkClass(item.id)}
-                    onClick={() => setIsSidebarOpen(false)}
+                    onClick={() => {
+                      setIsSidebarOpen(false);
+                      navigate(item.path);
+                    }}
                   >
                     <span className="text-xl">{item.emoji}</span>
                     <span>{item.name}</span>
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
