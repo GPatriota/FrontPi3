@@ -107,7 +107,7 @@ function MainLayout({ children, activePage }: MainLayoutProps) {
             ☰
           </button>
           <div className="flex-1" />
-          
+
           <div className="relative" ref={menuRef}>
             <button
               onClick={() => setIsMenuOpen((v) => !v)}
@@ -124,8 +124,12 @@ function MainLayout({ children, activePage }: MainLayoutProps) {
                 className="absolute right-0 mt-3 w-56 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200"
               >
                 <div className="px-4 py-3 border-b border-gray-100 bg-gray-50">
-                  <p className="text-sm font-medium text-gray-900">Minha Conta</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Gerencie sua conta</p>
+                  <p className="text-sm font-medium text-gray-900">
+                    Minha Conta
+                  </p>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    Gerencie sua conta
+                  </p>
                 </div>
 
                 <div className="py-1.5">
